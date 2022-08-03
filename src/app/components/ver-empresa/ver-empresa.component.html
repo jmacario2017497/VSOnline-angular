@@ -1,0 +1,34 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height: 600px;" src="/assets/images/pexels-sevenstorm-juhaszimrus-443383.jpg" class="d-block w-100"
+        alt="..." class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Bienvenido Nuevamente</h1>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-4 mt-5">
+      <div class="card text-center mb-3">
+        <div class="card-header">
+          {{ empresaModelGetId.nombre }}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">El usuario de la empresa es: {{ empresaModelGetId.usuario }}</h5>
+          <p class="card-text">sea bienvenido a {{ empresaModelGetId.nombre }} presione a continuación para ver las
+            sucursales disponibles</p>
+          <button type="button" class="btn btn-primary" [routerLink]="['/vista-sucursales', empresaModelGetId._id]"
+            routerLinkActive="active">Ver Sucursales</button>
+        </div>
+        <div class="card-footer text-muted">
+          <h6 class="card-text">ayudandole con una compleja tarea</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

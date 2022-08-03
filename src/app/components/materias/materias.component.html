@@ -1,0 +1,31 @@
+<body>
+
+  <app-navbar-alumno></app-navbar-alumno>
+
+  <div class="container">
+
+    <h2>{{categoria}}</h2>
+
+    <div class="row">
+      <div class="col-12 col-md-3" *ngFor="let tema of temaModelGet">
+
+        <div class="card text-center mb-3">
+          <div class="card-header">
+            <b> {{ tema.nombreTema }} </b>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Profe: {{tema.profesorSolicitado}}</h5>
+            <h5 class="card-title">Categoria: {{tema.categoria}}</h5>
+            <h5 class="card-title">Idioma: {{tema.idioma}}</h5>
+            <h5 class="card-title">Info: {{tema.tipoInformacion}}</h5>
+            <h5 class="card-title">PRECIO: {{tema.precio}}$</h5>
+
+            <button type="button" class="btn btn-success" (click)="getTemaId(tema._id)">COMPRAR</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>

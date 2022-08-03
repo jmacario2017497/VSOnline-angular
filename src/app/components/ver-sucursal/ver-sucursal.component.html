@@ -1,0 +1,33 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height: 600px;" src="/assets/images/pexels-sevenstorm-juhaszimrus-443383.jpg" class="d-block w-100"
+        alt="..." class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Bienvenido Nuevamente</h1>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-12 col-md-4 mt-5" *ngFor="let suc of sucursalModelGetEmpresa">
+      <div class="card text-center mb-3">
+        <div class="card-header">
+          {{suc.nombreSucursal}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{suc.municipio}}</h5>
+          <p class="card-text">
+            la direccion de la sucursal es: {{suc.direccionSucursal}}</p>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

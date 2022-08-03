@@ -1,0 +1,19 @@
+<div style="width: 40%;margin: auto; margin-top: 100px;">
+  <div >
+    <label for="">Hola<span style="font-weight: bold;"> {{this.identidad.nombre}} </span>escribe aqui tus dudas</label>
+
+  </div>
+  <div class="mt-3">
+    <div *ngFor="let mensaje of MensajeModelGet">
+      <lable for="" style="font-weight: bold;">{{mensaje.usuario.nombre}} {{mensaje.usuario.apellido}} ></lable>
+      <span >{{mensaje.message}}</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Escriba un mensaje" name="message"
+    #message="ngModel" [(ngModel)]="MensajeModelAdd.message"
+    [ngModelOptions]="{standalone:true}"><button type="button" class="btn btn-dark" (click)="this.mandar()">mandar</button>
+  </div>
+</div>
+
+
+
+

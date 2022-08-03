@@ -1,0 +1,26 @@
+body {
+  background-color: #BECDE3;
+}
+
+.card{
+  border-color: #33B1FF; border-style: solid;
+}
+
+.card-header {
+  background-color: #2276AA;
+  font-size: 20px;
+  border-color: #33B1FF;
+}
+
+.card-body {
+  background-color: #00CC6A;
+}
+
+.card-title {
+  font-size: 17px;
+}
+
+img{
+  
+  height: min-content;
+}

@@ -1,0 +1,46 @@
+<app-navbar-alumno></app-navbar-alumno>
+
+<div class="container">
+
+  <h2>AGENDA:</h2>
+
+  <div class="row">
+    <div class="col-12 col-md-3" *ngFor="let re of reunionModelGet">
+
+      <div class="card text-center mb-3">
+        <div class="card-header">
+          <b> {{ re.tema }} </b>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Profe: {{re.usuarioProfesor}}</h5>
+          <h5 class="card-title">fecha: {{re.fechaReunion}}</h5>
+          <h5 class="card-title">Info: {{re.estado}}</h5>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <h2>BIBLIOTECA:</h2>
+
+  <div class="row">
+    <div class="col-12 col-md-3" *ngFor="let co of compraModelGet">
+
+      <div class="card text-center mb-3">
+        <div class="card-header">
+          <b> {{ co.tema }} </b>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Profe: {{co.usuarioProfesor}}</h5>
+          <h5 class="card-title">fecha: {{co.fechaCompra}}</h5>
+          <h5 class="card-title">Info: {{co.tipo}}</h5>
+          <h5 class="card-title">Precio: {{co.precio}}</h5>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

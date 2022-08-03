@@ -1,0 +1,31 @@
+<app-navbar-alumno></app-navbar-alumno>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Busque al profesor por: Nombre o Usuario"
+        aria-label="Search" name="filtroBusqueda" [(ngModel)]="filtroBusqueda">
+      <button class="btn btn-outline-success" type="submit"><img src="../assets/images/lupa.png"></button>
+    </form>
+  </div>
+</nav>
+
+<!--<a href="https://www.flaticon.es/iconos-gratis/lupa" title="lupa iconos">Lupa iconos creados por Smashicons - Flaticon</a>-->
+
+<div class="row">
+  <div class="col-12 col-md-3" *ngFor="let pro of profeModelGet | filtro:filtroBusqueda">
+
+    <div class="card text-center mb-3">
+      <div class="card-header">
+        <b> {{ pro.usuario }} </b>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">NombreC: {{pro.nombre}} {{pro.apellido}}</h5>
+        <h5 class="card-title">VentasHechas: {{pro.ventasHechas}}</h5>
+        <h5 class="card-title">ClasesImpartidas: {{pro.clasesImpartidas}}</h5>
+        <h5 class="card-title">Email: {{pro.email}}</h5>
+      </div>
+    </div>
+
+  </div>
+</div>
